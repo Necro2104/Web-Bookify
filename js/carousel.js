@@ -137,3 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Stop autoplay on hover
     track.addEventListener('mouseenter', stopAutoplay);
     track.addEventListener('mouseleave', startAutoplay);
+
+    // Stop autoplay when user interacts with controls
+    prevButton.addEventListener('click', stopAutoplay);
+    nextButton.addEventListener('click', stopAutoplay);
+    document.querySelectorAll('.carousel-dot').forEach(dot => {
+        dot.addEventListener('click', stopAutoplay);
+    });

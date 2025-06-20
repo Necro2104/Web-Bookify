@@ -44,3 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     };
+
+    window.addEventListener('scroll', animateOnScroll);
+    // Initialize on page load
+    animateOnScroll();

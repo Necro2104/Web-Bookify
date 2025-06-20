@@ -103,3 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCarousel();
         });
     });
+
+       // Auto-play functionality
+    let autoplayInterval;

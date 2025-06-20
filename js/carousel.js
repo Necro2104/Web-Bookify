@@ -76,3 +76,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Handle window resize
     window.addEventListener('resize', updateCarousel);
+
+     // Navigation buttons
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });

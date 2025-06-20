@@ -18,3 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
         slide.innerHTML = createBookCard(book);
         track.appendChild(slide);
     });
+
+    // Create navigation dots
+    featuredBooks.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot';
+        if (index === 0) dot.classList.add('active');
+        dot.setAttribute('data-index', index);
+        carouselNav.appendChild(dot);
+    });

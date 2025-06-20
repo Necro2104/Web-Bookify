@@ -66,3 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+// Helper function to format price
+function formatPrice(price) {
+    return '$' + price.toFixed(2);
+}

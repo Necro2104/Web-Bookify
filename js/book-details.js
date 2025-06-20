@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const discountPercent = book.originalPrice 
         ? Math.round((book.originalPrice - book.price) / book.originalPrice * 100) 
         : 0;
-        
+
     // Update page title
     document.title = `${book.title} - Bookify`;
 
@@ -92,3 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(`Book added to wishlist! (ID: ${bookId})`);
         });
     }
+
+    // Animate book details on page load
+    setTimeout(() => {
+        document.querySelector('.book-details-image').classList.add('animated');
+        document.querySelector('.book-details-info').classList.add('animated');
+    }, 100);
+});

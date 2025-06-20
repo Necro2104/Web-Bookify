@@ -30,3 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Reset form
         this.reset();
+
+        // Create success notification
+        const notification = document.createElement('div');
+        notification.className = 'notification success';
+        notification.innerHTML = `
+            <div class="notification-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="notification-content">
+                <h3>Message Sent!</h3>
+                <p>We've received your message and will respond shortly.</p>
+            </div>
+            <button class="notification-close">×</button>
+        `;
+        
+        document.body.appendChild(notification);

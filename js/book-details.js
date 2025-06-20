@@ -60,3 +60,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const relatedBooks = books
         .filter(b => b.category === book.category && b.id !== book.id)
         .slice(0, 4);
+    
+    // If there are related books, render them
+    if (relatedBooks.length > 0) {
+        relatedBooks.forEach(relatedBook => {
+            relatedBooksContainer.innerHTML += createBookCard(relatedBook);
+        });
+    } else {
+        // If no related books, show some bestsellers instead
+        const bestsellers = books
+            .filter(b => b.bestseller && b.id !== book.id)
+            .slice(0, 4);
+        
+        bestsellers.forEach(bestsellerBook => {
+            relatedBooksContainer.innerHTML += createBookCard(bestsellerBook);
+        });
+    }

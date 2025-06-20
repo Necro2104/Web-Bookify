@@ -130,3 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(autoplayInterval);
         }
     }
+
+    // Start autoplay
+    startAutoplay();

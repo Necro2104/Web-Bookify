@@ -73,3 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function formatPrice(price) {
     return '$' + price.toFixed(2);
 }
+
+// Helper function to create book card
+function createBookCard(book) {
+    const discountPercent = book.originalPrice ? Math.round((book.originalPrice - book.price) / book.originalPrice * 100) : 0;

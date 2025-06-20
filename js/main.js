@@ -100,3 +100,18 @@ function createBookCard(book) {
         </div>
     `;
 }
+
+// Add to cart functionality (simulation)
+function addToCartHandler() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const bookId = this.dataset.id;
+            
+            // Show success message (in real app, would add to cart)
+            alert(`Book added to cart! (ID: ${bookId})`);
+        });
+    });
+}

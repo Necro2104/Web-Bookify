@@ -10,3 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Filter featured books
     const featuredBooks = books.filter(book => book.featured);
+
+     // Populate carousel with featured books
+    featuredBooks.forEach((book, index) => {
+        const slide = document.createElement('li');
+        slide.className = 'carousel-item';
+        slide.innerHTML = createBookCard(book);
+        track.appendChild(slide);
+    });

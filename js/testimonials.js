@@ -32,3 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
             testimonialSlides.appendChild(slide);
+
+              // Create testimonial dot
+            const dot = document.createElement('div');
+            dot.className = 'testimonial-dot';
+            if (index === 0) dot.classList.add('active');
+            dot.setAttribute('data-index', index);
+            testimonialDots.appendChild(dot);
+        });
+    }

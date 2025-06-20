@@ -133,3 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start autoplay
     startAutoplay();
+
+        // Stop autoplay on hover
+    track.addEventListener('mouseenter', stopAutoplay);
+    track.addEventListener('mouseleave', startAutoplay);

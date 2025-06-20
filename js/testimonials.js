@@ -54,3 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
      
      // Initialize testimonials
     initializeTestimonials();
+
+    // Add click event to dots
+    testimonialDots.addEventListener('click', function(e) {
+        if (e.target.classList.contains('testimonial-dot')) {
+            currentTestimonialIndex = parseInt(e.target.getAttribute('data-index'));
+            updateTestimonialSlider();
+            resetAutoSlide();
+        }
+    });

@@ -30,4 +30,5 @@ document.addEventListener('DOMContentLoaded', function() {
     const discountPercent = book.originalPrice 
         ? Math.round((book.originalPrice - book.price) / book.originalPrice * 100) 
         : 0;
-        
+         // Update page title
+    document.title = `${book.title} - Bookify`;

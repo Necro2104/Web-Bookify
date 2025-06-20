@@ -14,3 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
             searchResults.style.display = 'none';
             return;
         }
+
+        // Filter books based on title or author
+        const results = books.filter(book => 
+            book.title.toLowerCase().includes(query) || 
+            book.author.toLowerCase().includes(query)
+        );

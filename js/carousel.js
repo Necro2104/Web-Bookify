@@ -52,3 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentIndex > maxIndex) {
             currentIndex = maxIndex;
         }
+
+          // Translate the track
+        const offset = -currentIndex * slideWidth;
+        track.style.transform = `translateX(${offset}px)`;

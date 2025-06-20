@@ -61,3 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
         });
+
+         // Update button states
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === maxIndex;

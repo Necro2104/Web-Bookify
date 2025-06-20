@@ -95,3 +95,11 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCarousel();
         }
     });
+
+    // Navigation dots
+    document.querySelectorAll('.carousel-dot').forEach(dot => {
+        dot.addEventListener('click', () => {
+            currentIndex = parseInt(dot.getAttribute('data-index'));
+            updateCarousel();
+        });
+    });

@@ -32,3 +32,27 @@ document.addEventListener('DOMContentLoaded', function() {
         : 0;
          // Update page title
     document.title = `${book.title} - Bookify`;
+    
+    // Render book details
+    bookDetailsContainer.innerHTML = `
+        <div class="book-details-image">
+            <img src="${book.image}" alt="${book.title}">
+        </div>
+        <div class="book-details-info">
+            <h2>${book.title}</h2>
+            <p class="book-details-author">by ${book.author}</p>
+            <span class="book-details-category">${book.category}</span>
+            <div class="book-details-price">
+                ${formatPrice(book.price)}
+                ${book.originalPrice ? `<span class="book-details-original-price">${formatPrice(book.originalPrice)}</span>` : ''}
+                ${discountPercent > 0 ? `<span class="discount-badge">-${discountPercent}%</span>` : ''}
+            </div>
+            <div class="book-details-description">
+                <p>${book.description}</p>
+            </div>
+            <div class="book-details-actions">
+                <button class="btn add-to-cart" data-id="${book.id}">Add to Cart</button>
+                <button class="btn btn-secondary add-to-wishlist" data-id="${book.id}">Add to Wishlist</button>
+            </div>
+        </div>
+    `;

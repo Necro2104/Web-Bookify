@@ -90,3 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
             searchResults.style.display = 'none';
         }
     });
+
+      // Focus on search input
+    searchInput.addEventListener('focus', function() {
+        if (this.value.trim().length >= 2) {
+            performSearch();
+        }
+    });
+});

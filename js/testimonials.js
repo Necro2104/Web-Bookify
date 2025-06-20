@@ -41,3 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
             testimonialDots.appendChild(dot);
         });
     }
+
+    // Function to update testimonial slider
+    function updateTestimonialSlider() {
+        testimonialSlides.style.transform = `translateX(-${currentTestimonialIndex * 100}%)`;
+        
+        // Update active dot
+        document.querySelectorAll('.testimonial-dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentTestimonialIndex);
+        });
+    }
+     

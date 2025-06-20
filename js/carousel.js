@@ -30,3 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set initial state
     let currentIndex = 0;
+
+    // Calculate how many slides to show based on screen width
+    function getSlidesPerView() {
+        if (window.innerWidth < 480) return 1;
+        if (window.innerWidth < 768) return 2;
+        if (window.innerWidth < 992) return 3;
+        return 4;
+    }

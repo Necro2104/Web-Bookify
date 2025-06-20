@@ -19,3 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('nav-open');
         }
     });
+
+    // For any page that has book cards, add hover animation
+    const bookCards = document.querySelectorAll('.book-card');
+    bookCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.querySelector('.book-card-hover')?.classList.add('show');
+        });
+        card.addEventListener('mouseleave', function() {
+            this.querySelector('.book-card-hover')?.classList.remove('show');
+        });
+    });

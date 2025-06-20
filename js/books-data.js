@@ -145,3 +145,54 @@ const books = [
         bestseller: true
     }
 ];
+// Testimonials data
+const testimonials = [
+    {
+        id: 1,
+        name: "Sarah Johnson",
+        avatar: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        quote: "Bookify has completely transformed my reading experience. The selection is amazing, and the delivery is super fast!",
+        rating: 5,
+        date: "January 15, 2025"
+    },
+    {
+        id: 2,
+        name: "Michael Rodriguez",
+        avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        quote: "I've been a book lover all my life, and Bookify has become my go-to online bookstore. Their customer service is exceptional!",
+        rating: 5,
+        date: "February 3, 2025"
+    },
+    {
+        id: 3,
+        name: "Emily Chang",
+        avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        quote: "The variety of books available on Bookify is impressive. I've discovered so many new authors and genres thanks to their recommendations.",
+        rating: 4,
+        date: "March 11, 2025"
+    },
+    {
+        id: 4,
+        name: "David Wilson",
+        avatar: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        quote: "Fast shipping, great prices, and an incredible selection. What more could a book lover ask for? Highly recommend!",
+        rating: 5,
+        date: "April 7, 2025"
+    },
+    {
+        id: 5,
+        name: "Olivia Martinez",
+        avatar: "https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        quote: "I love that Bookify supports local authors. It's become my favorite way to discover new voices in literature.",
+        rating: 5,
+        date: "May 19, 2025"
+    },
+    {
+        id: 6,
+        name: "James Thompson",
+        avatar: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        quote: "The recommendations feature on Bookify is spot on! It feels like they really understand my reading preferences.",
+        rating: 4,
+        date: "June 2, 2025"
+    }
+];

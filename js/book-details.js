@@ -76,3 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             relatedBooksContainer.innerHTML += createBookCard(bestsellerBook);
         });
     }
+
+    // Initialize add to cart functionality
+    addToCartHandler();
+    

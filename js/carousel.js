@@ -73,3 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize
     updateCarousel();
+
+      // Handle window resize
+    window.addEventListener('resize', updateCarousel);

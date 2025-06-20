@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         : 0;
          // Update page title
     document.title = `${book.title} - Bookify`;
-    
+
     // Render book details
     bookDetailsContainer.innerHTML = `
         <div class="book-details-image">
@@ -56,3 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     `;
+    // Find related books (same category, excluding current book)
+    const relatedBooks = books
+        .filter(b => b.category === book.category && b.id !== book.id)
+        .slice(0, 4);

@@ -144,3 +144,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.carousel-dot').forEach(dot => {
         dot.addEventListener('click', stopAutoplay);
     });
+
+    // Populate bestsellers section
+    const bestsellersGrid = document.querySelector('.bestsellers .book-grid');
+    if (bestsellersGrid) {
+        const bestsellerBooks = books.filter(book => book.bestseller).slice(0, 4);
+        
+        bestsellerBooks.forEach(book => {
+            bestsellersGrid.innerHTML += createBookCard(book);
+        });
+    }
+});

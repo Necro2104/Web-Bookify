@@ -4,4 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const testimonialDots = document.querySelector('.testimonial-dots');
     
     if (!testimonialSlides || !testimonialDots) return;
-    
+
+        // Initialize testimonial slider
+    let currentTestimonialIndex = 0;

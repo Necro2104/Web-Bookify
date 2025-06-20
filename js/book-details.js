@@ -26,3 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         return;
     }
+    // Calculate discount if there's an original price
+    const discountPercent = book.originalPrice 
+        ? Math.round((book.originalPrice - book.price) / book.originalPrice * 100) 
+        : 0;
+        

@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const discountPercent = book.originalPrice 
         ? Math.round((book.originalPrice - book.price) / book.originalPrice * 100) 
         : 0;
-         // Update page title
+        
+    // Update page title
     document.title = `${book.title} - Bookify`;
 
     // Render book details
@@ -80,3 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize add to cart functionality
     addToCartHandler();
     
+    // Add to wishlist button handler
+    const wishlistBtn = document.querySelector('.add-to-wishlist');
+    if (wishlistBtn) {
+        wishlistBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const bookId = this.dataset.id;
+            
+            // Show success message (in real app, would add to wishlist)
+            alert(`Book added to wishlist! (ID: ${bookId})`);
+        });
+    }

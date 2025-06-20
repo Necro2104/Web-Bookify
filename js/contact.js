@@ -54,3 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 notification.remove();
             }, 300);
         }, 5000);
+
+         // Close button for notification
+        notification.querySelector('.notification-close').addEventListener('click', function() {
+            notification.classList.add('fade-out');
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        });
+    });

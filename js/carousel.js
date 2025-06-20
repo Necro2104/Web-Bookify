@@ -47,3 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
          // Calculate max index based on slides per view
         const maxIndex = Math.max(0, slides.length - slidesPerView);
+
+        // Ensure current index is not beyond max
+        if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+        }

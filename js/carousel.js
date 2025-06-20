@@ -65,3 +65,5 @@ document.addEventListener('DOMContentLoaded', function() {
          // Update button states
         prevButton.disabled = currentIndex === 0;
         nextButton.disabled = currentIndex === maxIndex;
+
+        

@@ -63,3 +63,72 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
         });
     });
+
+    // Add styles for notification
+    const style = document.createElement('style');
+    style.textContent = `
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: var(--border-radius-md);
+            box-shadow: 0 4px 12px var(--shadow-color);
+            display: flex;
+            align-items: center;
+            z-index: 100;
+            max-width: 400px;
+            animation: slide-in 0.3s ease;
+        }
+        
+        .notification.success {
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .notification-icon {
+            margin-right: 15px;
+            font-size: 24px;
+            color: var(--success-color);
+        }
+        
+        .notification-content h3 {
+            margin: 0 0 5px 0;
+        }
+        
+        .notification-content p {
+            margin: 0;
+            color: var(--light-text);
+        }
+        
+        .notification-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: var(--light-text);
+        }
+        
+        .notification.fade-out {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    `;
+    
+    document.head.appendChild(style);
+});

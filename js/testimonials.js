@@ -52,3 +52,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
      
+     // Initialize testimonials
+    initializeTestimonials();

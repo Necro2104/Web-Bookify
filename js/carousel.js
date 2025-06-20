@@ -84,3 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCarousel();
         }
     });
+
+    nextButton.addEventListener('click', () => {
+        const slides = document.querySelectorAll('.carousel-item');
+        const slidesPerView = getSlidesPerView();
+        const maxIndex = Math.max(0, slides.length - slidesPerView);
+        
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });

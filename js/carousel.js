@@ -27,3 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         dot.setAttribute('data-index', index);
         carouselNav.appendChild(dot);
     });
+
+    // Set initial state
+    let currentIndex = 0;

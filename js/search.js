@@ -66,3 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
             searchResults.style.display = 'block';
         }
     }
+
+       // Search button click
+    searchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        performSearch();
+    });

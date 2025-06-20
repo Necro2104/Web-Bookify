@@ -38,3 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.innerWidth < 992) return 3;
         return 4;
     }
+
+     // Update carousel positioning
+    function updateCarousel() {
+        const slidesPerView = getSlidesPerView();
+        const slides = document.querySelectorAll('.carousel-item');
+        const slideWidth = slides[0].offsetWidth;

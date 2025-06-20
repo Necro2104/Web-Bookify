@@ -11,3 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
+// Basic validation
+        if (!name || !email || !subject || !message) {
+            alert('Please fill out all fields.');
+            return;
+        }

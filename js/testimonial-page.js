@@ -68,3 +68,37 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+     // Form submission
+    const testimonialForm = document.getElementById('testimonial-form');
+    
+    if (testimonialForm) {
+        testimonialForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const rating = document.getElementById('rating').value;
+            const testimonial = document.getElementById('testimonial').value;
+            
+            // Validate form
+            if (!name || !email || !rating || !testimonial) {
+                alert('Please fill out all fields.');
+                return;
+            }
+            
+            if (parseInt(rating) < 1) {
+                alert('Please select a rating.');
+                return;
+            }
+            
+            // In a real app, would submit to server
+            alert('Thank you for your testimonial! It will be reviewed and published soon.');
+            
+            // Reset form
+            this.reset();
+            stars.forEach(s => s.classList.remove('active'));
+            ratingInput.value = 0;
+        });
+    }
+});

@@ -27,3 +27,44 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         testimonialsContainer.appendChild(testimonialCard);
     });
+
+    // Testimonial form rating stars
+    const stars = document.querySelectorAll('.stars .fa-star');
+    const ratingInput = document.getElementById('rating');
+    
+    if (stars.length && ratingInput) {
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingInput.value = rating;
+                
+                // Update star display
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Hover effect
+            star.addEventListener('mouseenter', function() {
+                const rating = this.getAttribute('data-rating');
+                
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.classList.add('hover');
+                    } else {
+                        s.classList.remove('hover');
+                    }
+                });
+            });
+            
+            star.addEventListener('mouseleave', function() {
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+            });
+        });
+    }

@@ -7,3 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prev-btn');
     const nextButton = document.getElementById('next-btn');
     const carouselNav = document.querySelector('.carousel-nav');
+
+    // Filter featured books
+    const featuredBooks = books.filter(book => book.featured);

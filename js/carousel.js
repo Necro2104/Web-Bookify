@@ -44,3 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const slidesPerView = getSlidesPerView();
         const slides = document.querySelectorAll('.carousel-item');
         const slideWidth = slides[0].offsetWidth;
+
+         // Calculate max index based on slides per view
+        const maxIndex = Math.max(0, slides.length - slidesPerView);

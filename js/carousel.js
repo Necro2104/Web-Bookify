@@ -56,3 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
           // Translate the track
         const offset = -currentIndex * slideWidth;
         track.style.transform = `translateX(${offset}px)`;
+
+         // Update active dot
+        document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });

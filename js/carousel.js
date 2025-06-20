@@ -106,3 +106,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
        // Auto-play functionality
     let autoplayInterval;
+
+    function startAutoplay() {
+        if (autoplayInterval) clearInterval(autoplayInterval);
+        
+        autoplayInterval = setInterval(() => {
+            const slides = document.querySelectorAll('.carousel-item');
+            const slidesPerView = getSlidesPerView();
+            const maxIndex = Math.max(0, slides.length - slidesPerView);
+            
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            
+            updateCarousel();
+        }, 5000);
+    }
+    
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+        }
+    }

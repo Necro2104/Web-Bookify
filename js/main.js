@@ -30,3 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
             this.querySelector('.book-card-hover')?.classList.remove('show');
         });
     });
+
+     // Scroll animations
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (elementPosition < windowHeight - 100) {
+                element.classList.add('animated');
+            }
+        });
+    };

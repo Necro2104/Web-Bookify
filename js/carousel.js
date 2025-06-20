@@ -66,4 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
         prevButton.disabled = currentIndex === 0;
         nextButton.disabled = currentIndex === maxIndex;
 
-        
+            // Visual feedback for disabled buttons
+        prevButton.style.opacity = currentIndex === 0 ? '0.5' : '1';
+        nextButton.style.opacity = currentIndex === maxIndex ? '0.5' : '1';
+    }
+
+    // Initialize
+    updateCarousel();

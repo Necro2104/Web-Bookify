@@ -72,3 +72,14 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         performSearch();
     });
+
+    // Search input keyup
+    searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        } else if (this.value.trim().length >= 2) {
+            performSearch();
+        } else {
+            searchResults.style.display = 'none';
+        }
+    });

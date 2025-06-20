@@ -63,3 +63,31 @@ document.addEventListener('DOMContentLoaded', function() {
             resetAutoSlide();
         }
     });
+
+     // Auto slide functionality
+    let autoSlideInterval;
+    
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+            updateTestimonialSlider();
+        }, 5000);
+    }
+    
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+    
+    // Start auto slide
+    startAutoSlide();
+    
+    // Pause auto slide on hover
+    testimonialSlides.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+    
+    testimonialSlides.addEventListener('mouseleave', () => {
+        startAutoSlide();
+    });
+});

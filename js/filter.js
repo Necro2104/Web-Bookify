@@ -148,3 +148,18 @@ document.addEventListener('DOMContentLoaded', function() {
         appliedFilters.sort = this.value;
         updateBooks();
     });
+
+      // Clear filters button
+    clearFiltersBtn.addEventListener('click', function() {
+        appliedFilters = {
+            category: 'all',
+            price: 'all',
+            sort: 'title-asc'
+        };
+        
+        categoryFilter.value = 'all';
+        priceFilter.value = 'all';
+        sortFilter.value = 'title-asc';
+        
+        updateBooks();
+    });

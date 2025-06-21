@@ -48,3 +48,13 @@ body {
     background-color: var(--bg-light);
     line-height: 1.6;
 }
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color var(--transition-time) ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}

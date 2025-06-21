@@ -173,3 +173,19 @@ Responsive Styles
         margin-bottom: var(--spacing-sm);
     }
 }
+
+/* For very small screens */
+@media screen and (max-width: 360px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-card {
+        max-width: 240px;
+        margin: 0 auto;
+    }
+}

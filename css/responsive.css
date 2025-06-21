@@ -3,3 +3,65 @@
 Responsive Styles
 ===============================
 */
+
+/* Tablet and smaller devices */
+@media screen and (max-width: 992px) {
+    .header-container {
+        padding: var(--spacing-md);
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 10;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-white);
+        box-shadow: -5px 0 15px var(--shadow-color);
+        transition: right 0.3s ease;
+        z-index: 5;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: var(--spacing-md);
+        order: 3;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .book-details-content {
+        grid-template-columns: 1fr;
+    }
+
+    .book-details-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}

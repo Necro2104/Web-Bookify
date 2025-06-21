@@ -1,0 +1,1 @@
+// Filter and sorting functionality for categories page

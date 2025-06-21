@@ -132,3 +132,19 @@ document.addEventListener('DOMContentLoaded', function() {
             booksGrid.innerHTML += createBookCard(book);
         });
     }
+
+      // Event listeners for filters
+    categoryFilter.addEventListener('change', function() {
+        appliedFilters.category = this.value;
+        updateBooks();
+    });
+    
+    priceFilter.addEventListener('change', function() {
+        appliedFilters.price = this.value;
+        updateBooks();
+    });
+    
+    sortFilter.addEventListener('change', function() {
+        appliedFilters.sort = this.value;
+        updateBooks();
+    });

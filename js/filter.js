@@ -163,3 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         updateBooks();
     });
+
+        // Initial render
+    updateBooks();
+});

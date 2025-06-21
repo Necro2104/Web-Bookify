@@ -525,3 +525,13 @@ Book Card Styles
     margin: 0 auto;
     padding: 0 var(--spacing-xl);
 }
+
+/* 
+===============================
+Bestsellers Section
+===============================
+*/
+.bestsellers {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--bg-light);
+}

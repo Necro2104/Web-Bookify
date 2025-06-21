@@ -1041,3 +1041,101 @@ Book Details
     padding: var(--spacing-xxl) 0;
     background-color: var(--bg-white);
 }
+/*
+===============================
+Testimonial Section
+===============================
+*/
+.testimonial-preview {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--bg-white);
+}
+
+.testimonial-slider {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-slide {
+    flex: 0 0 100%;
+    padding: var(--spacing-xl);
+    text-align: center;
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-md);
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding: 0 var(--spacing-lg);
+}
+
+.testimonial-quote::before,
+.testimonial-quote::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--primary-light);
+    position: absolute;
+}
+
+.testimonial-quote::before {
+    left: 0;
+    top: -10px;
+}
+
+.testimonial-quote::after {
+    right: 0;
+    bottom: -10px;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.testimonial-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    margin: 0 var(--spacing-xs);
+    cursor: pointer;
+    transition: all var(--transition-time) ease;
+}
+
+.testimonial-dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.view-more {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}

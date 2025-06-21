@@ -60,3 +60,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 filteredBooks.sort((a, b) => b.price - a.price);
                 break;
         }
+
+           // Update the active filters display
+        updateFilterTags();
+        
+        // Render the filtered and sorted books
+        renderBooks();
+        
+        // Add animation class
+        setTimeout(() => {
+            document.querySelectorAll('.book-card').forEach(card => {
+                card.classList.add('animated');
+            });
+        }, 100);
+    }

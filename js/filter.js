@@ -22,3 +22,25 @@ document.addEventListener('DOMContentLoaded', function() {
         appliedFilters.category = urlCategory;
         categoryFilter.value = urlCategory;
     }
+
+     // Function to apply filters and sort
+    function updateBooks() {
+        // Filter by category
+        if (appliedFilters.category !== 'all') {
+            filteredBooks = books.filter(book => book.category === appliedFilters.category);
+        } else {
+            filteredBooks = [...books];
+        }
+        
+        // Filter by price
+        if (appliedFilters.price !== 'all') {
+            const [min, max] = appliedFilters.price.split('-');
+            
+            if (max === '+') {
+                filteredBooks = filteredBooks.filter(book => book.price >= parseFloat(min));
+            } else {
+                filteredBooks = filteredBooks.filter(book => 
+                    book.price >= parseFloat(min) && book.price <= parseFloat(max)
+                );
+            }
+        }

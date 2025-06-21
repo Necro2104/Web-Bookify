@@ -189,3 +189,19 @@ Responsive Styles
         margin: 0 auto;
     }
 }
+
+/* For wide screens */
+@media screen and (min-width: 1400px) {
+    .carousel-container,
+    .book-grid,
+    .features-container,
+    .categories-container,
+    .footer-content,
+    .books-container,
+    .book-details-container,
+    .testimonials-container,
+    .contact-container,
+    .map-container {
+        max-width: 1400px;
+    }
+}

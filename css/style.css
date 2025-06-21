@@ -35,3 +35,16 @@ Base Styles and Variables
     --border-radius-lg: 12px;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--dark-text);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}

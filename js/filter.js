@@ -99,3 +99,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 filterText += 'Price: $30+, ';
             }
         }
+
+          // Sort filter tag
+        if (appliedFilters.sort === 'title-asc') {
+            filterText += 'Sorted by: Title (A-Z)';
+        } else if (appliedFilters.sort === 'title-desc') {
+            filterText += 'Sorted by: Title (Z-A)';
+        } else if (appliedFilters.sort === 'price-asc') {
+            filterText += 'Sorted by: Price (Low to High)';
+        } else if (appliedFilters.sort === 'price-desc') {
+            filterText += 'Sorted by: Price (High to Low)';
+        }
+        
+        filterTagsDisplay.textContent = filterText;
+    }

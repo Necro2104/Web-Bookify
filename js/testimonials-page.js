@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // In a real app, would submit to server
             alert('Thank you for your testimonial! It will be reviewed and published soon.');
             
-            // Reset form
+            // Reset forms
             this.reset();
             stars.forEach(s => s.classList.remove('active'));
             ratingInput.value = 0;

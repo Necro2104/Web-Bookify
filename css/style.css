@@ -578,3 +578,101 @@ Why Choose Us Section
 .feature h3 {
     margin-bottom: var(--spacing-sm);
 }
+
+/*===============================
+Footer
+===============================
+*/
+footer {
+    background-color: var(--bg-dark);
+    color: var(--white-text);
+    padding-top: var(--spacing-xxl);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.footer-section h3 {
+    color: var(--white-text);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.about p {
+    margin-bottom: var(--spacing-md);
+}
+
+    
+.social-icons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white-text);
+    transition: all var(--transition-time) ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.links ul li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.links ul li a {
+    color: var(--white-text);
+    opacity: 0.8;
+    transition: all var(--transition-time) ease;
+}
+
+.links ul li a:hover {
+    opacity: 1;
+    color: var(--primary-light);
+    padding-left: var(--spacing-sm);
+}
+
+.contact-info li {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-info li i {
+    margin-right: var(--spacing-md);
+    color: var(--primary-light);
+    margin-top: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-xxl);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

@@ -74,3 +74,28 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }, 100);
     }
+
+      // Function to update the filter tags display
+    function updateFilterTags() {
+        let filterText = '';
+        
+        // Category filter tag
+        if (appliedFilters.category !== 'all') {
+            const categoryName = appliedFilters.category.charAt(0).toUpperCase() + appliedFilters.category.slice(1);
+            filterText += `Category: ${categoryName}, `;
+        } else {
+            filterText += 'All Categories, ';
+        }
+        
+        // Price filter tag
+        if (appliedFilters.price !== 'all') {
+            if (appliedFilters.price === '0-10') {
+                filterText += 'Price: $0-$10, ';
+            } else if (appliedFilters.price === '10-20') {
+                filterText += 'Price: $10-$20, ';
+            } else if (appliedFilters.price === '20-30') {
+                filterText += 'Price: $20-$30, ';
+            } else if (appliedFilters.price === '30+') {
+                filterText += 'Price: $30+, ';
+            }
+        }

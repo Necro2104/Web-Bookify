@@ -15,3 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
         price: 'all',
         sort: 'title-asc'
     };
+
+    // Check URL parameters for filter
+    const urlCategory = getUrlParameter('category');
+    if (urlCategory) {
+        appliedFilters.category = urlCategory;
+        categoryFilter.value = urlCategory;
+    }

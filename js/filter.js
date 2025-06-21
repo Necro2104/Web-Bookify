@@ -113,3 +113,22 @@ document.addEventListener('DOMContentLoaded', function() {
         
         filterTagsDisplay.textContent = filterText;
     }
+
+     // Function to render books
+    function renderBooks() {
+        booksGrid.innerHTML = '';
+        
+        if (filteredBooks.length === 0) {
+            booksGrid.innerHTML = `
+                <div class="no-results">
+                    <h3>No books found</h3>
+                    <p>Try adjusting your filters to find more books.</p>
+                </div>
+            `;
+            return;
+        }
+        
+        filteredBooks.forEach(book => {
+            booksGrid.innerHTML += createBookCard(book);
+        });
+    }

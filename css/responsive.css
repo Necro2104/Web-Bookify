@@ -65,3 +65,58 @@ Responsive Styles
         grid-template-columns: 1fr;
     }
 }
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: var(--spacing-md);
+        padding: 0 var(--spacing-md);
+    }
+
+    .carousel-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: 0 var(--spacing-md);
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 0 var(--spacing-md);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-md);
+    }
+
+    .filter-container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .testimonials-container {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-md);
+    }
+}

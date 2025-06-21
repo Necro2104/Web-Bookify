@@ -44,3 +44,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 );
             }
         }
+
+         // Sort books
+        switch (appliedFilters.sort) {
+            case 'title-asc':
+                filteredBooks.sort((a, b) => a.title.localeCompare(b.title));
+                break;
+            case 'title-desc':
+                filteredBooks.sort((a, b) => b.title.localeCompare(a.title));
+                break;
+            case 'price-asc':
+                filteredBooks.sort((a, b) => a.price - b.price);
+                break;
+            case 'price-desc':
+                filteredBooks.sort((a, b) => b.price - a.price);
+                break;
+        }

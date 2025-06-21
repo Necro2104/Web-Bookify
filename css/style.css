@@ -113,3 +113,17 @@ img {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px var(--shadow-color);
 }
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--dark-text);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-dark);
+}

@@ -931,3 +931,113 @@ Filter Section
     margin-bottom: 0;
     font-size: 1.1rem;
 }
+
+/*
+===============================
+Book Details
+===============================
+*/
+.book-details-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--bg-light);
+}
+
+.book-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.book-details-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.back-button {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all var(--transition-time) ease;
+}
+
+.back-button:hover {
+    color: var(--primary-dark);
+    transform: translateX(-5px);
+}
+
+.book-details-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xl);
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+.book-details-image {
+    position: relative;
+    padding-top: 150%;
+}
+
+.book-details-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.book-details-info h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.book-details-author {
+    color: var(--light-text);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.book-details-price {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.book-details-original-price {
+    color: var(--light-text);
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.book-details-category {
+    background-color: var(--primary-light);
+    color: var(--white-text);
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.book-details-description {
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.7;
+}
+
+.book-details-info .btn {
+    margin-right: var(--spacing-md);
+}
+
+.related-books {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--bg-white);
+}

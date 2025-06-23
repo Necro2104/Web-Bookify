@@ -662,6 +662,7 @@ footer {
     margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: flex-start;
+    color: #1565c0;
 }
 
 .contact-info li i {
